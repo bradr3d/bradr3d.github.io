@@ -4,186 +4,477 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - TaskFrame</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 2em;
-            max-width: 800px;
-            margin: 0 auto;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #ffeef2 0%, #ffd6e0 100%);
+            min-height: 100vh;
         }
-        
-        h1, h2 {
-            color: #2c3e50;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        
-        h1 {
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5em;
-            margin-top: 0;
+
+        /* Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        
-        h2 {
-            font-size: 1.2em;
-            font-weight: bold;
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        
-        p {
-            margin-bottom: 1em;
-        }
-        
-        ul {
-            margin-bottom: 1em;
-        }
-        
-        li {
-            margin-bottom: 0.5em;
-        }
-        
-        a {
-            color: #3498db;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff6b9d;
             text-decoration: none;
         }
-        
-        a:hover {
-            text-decoration: underline;
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
         }
-        
-        .contact-card {
-            background: #f8f9fa;
-            padding: 1.5em;
-            border-radius: 8px;
-            margin: 1.5em 0;
-            border-left: 4px solid #3498db;
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
         }
-        
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid #e9ecef;
-            border-radius: 5px;
-            padding: 1em;
-            margin-bottom: 1em;
+
+        .nav-links a:hover {
+            color: #ff6b9d;
         }
-        
-        .faq-question {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 0.5em;
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b9d;
+            transition: width 0.3s ease;
         }
-        
-        .highlight {
-            background: #e8f6fd;
-            padding: 1em;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-            margin: 1em 0;
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
-        
-        .navigation {
-            background: #2c3e50;
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
             color: white;
-            padding: 1em;
-            border-radius: 5px;
-            margin-bottom: 2em;
+            padding: 4rem 0;
             text-align: center;
         }
-        
-        .navigation a {
-            color: white;
-            margin: 0 1em;
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
         }
-        
-        .navigation a:hover {
-            color: #3498db;
+
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            border-left: 5px solid #ff6b9d;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card h2 {
+            color: #ff6b9d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .contact-card a {
+            color: #ff6b9d;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #c44569;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-question::before {
+            content: '❓';
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffeef2 0%, #ffd6e0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff6b9d;
+            margin: 2rem 0;
+        }
+
+        .highlight p {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .highlight ul {
+            margin-left: 1.5rem;
+        }
+
+        .highlight li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .info-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-section h2 {
+            color: #ff6b9d;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .info-section ul {
+            margin-left: 1.5rem;
+        }
+
+        .info-section li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .info-section a {
+            color: #ff6b9d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-section a:hover {
+            color: #c44569;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b9d;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-card,
+            .faq-item {
+                padding: 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <div class="navigation">
-        <a href="index.html">Home</a>
-        <a href="support.html">Support</a>
-        <a href="privacypolicy.html">Privacy Policy</a>
-    </div>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Bradley Rothbaum</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <h1>TaskFrame Support</h1>
-    
-    <p>Welcome to TaskFrame support! We're here to help you get the most out of your productivity experience. Find answers to common questions below or contact us directly.</p>
+    <header class="header">
+        <div class="container">
+            <h1>TaskFrame Support</h1>
+            <p>We're here to help you get the most out of your productivity experience. Find answers to common questions below or contact us directly.</p>
+        </div>
+    </header>
 
-    <div class="contact-card">
-        <h2>📧 Get Help</h2>
-        <p><strong>Email Support:</strong> <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a></p>
-        <p>We typically respond within 24-48 hours. Please include as much detail as possible about your issue, including your device type and app version.</p>
-    </div>
+    <main class="main-content">
+        <div class="container">
+            <div class="contact-card fade-in">
+                <h2><i class="fas fa-envelope"></i> Get Help</h2>
+                <p><strong>Email Support:</strong> <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a></p>
+                <p>We typically respond within 24-48 hours. Please include as much detail as possible about your issue, including your device type and app version.</p>
+            </div>
 
-    <h2>Frequently Asked Questions</h2>
+            <h2 class="section-title fade-in">Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-        <div class="faq-question">How do I get started with TaskFrame?</div>
-        <p>Download TaskFrame from the App Store, create your account, and start adding your first tasks. The app will guide you through the initial setup process.</p>
-    </div>
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">How do I get started with TaskFrame?</div>
+                    <p>Download TaskFrame from the App Store, create your account, and start adding your first tasks. The app will guide you through the initial setup process.</p>
+                </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Is TaskFrame free to use?</div>
-        <p>TaskFrame offers both free and premium features. The core functionality is available for free, with additional premium features available through in-app purchases.</p>
-    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Is TaskFrame free to use?</div>
+                    <p>TaskFrame offers both free and premium features. The core functionality is available for free, with additional premium features available through in-app purchases.</p>
+                </div>
 
-    <div class="faq-item">
-        <div class="faq-question">How do I sync my tasks across devices?</div>
-        <p>Make sure you're signed in to the same account on all your devices. TaskFrame automatically syncs your data when you have an internet connection.</p>
-    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">How do I sync my tasks across devices?</div>
+                    <p>Make sure you're signed in to the same account on all your devices. TaskFrame automatically syncs your data when you have an internet connection.</p>
+                </div>
 
-    <div class="faq-item">
-        <div class="faq-question">I'm having trouble with notifications</div>
-        <p>Check your device's notification settings and ensure TaskFrame has permission to send notifications. You can also adjust notification preferences within the app settings.</p>
-    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">I'm having trouble with notifications</div>
+                    <p>Check your device's notification settings and ensure TaskFrame has permission to send notifications. You can also adjust notification preferences within the app settings.</p>
+                </div>
 
-    <div class="faq-item">
-        <div class="faq-question">How do I delete my account?</div>
-        <p>To delete your account and all associated data, please contact us at <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a> with your deletion request.</p>
-    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">How do I delete my account?</div>
+                    <p>To delete your account and all associated data, please contact us at <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a> with your deletion request.</p>
+                </div>
 
-    <div class="faq-item">
-        <div class="faq-question">The app is crashing or not working properly</div>
-        <p>Try restarting the app or your device. If the problem persists, please contact support with details about when the crash occurs and what you were doing in the app.</p>
-    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">The app is crashing or not working properly</div>
+                    <p>Try restarting the app or your device. If the problem persists, please contact support with details about when the crash occurs and what you were doing in the app.</p>
+                </div>
+            </div>
 
-    <h2>Troubleshooting</h2>
-    
-    <div class="highlight">
-        <p><strong>Before contacting support, please try these steps:</strong></p>
-        <ul>
-            <li>Force close and restart the app</li>
-            <li>Check if you have the latest version of TaskFrame</li>
-            <li>Ensure you have a stable internet connection</li>
-            <li>Restart your device</li>
-            <li>Check if there are any pending iOS/Android updates</li>
-        </ul>
-    </div>
+            <div class="highlight fade-in">
+                <p><strong>Before contacting support, please try these steps:</strong></p>
+                <ul>
+                    <li>Force close and restart the app</li>
+                    <li>Check if you have the latest version of TaskFrame</li>
+                    <li>Ensure you have a stable internet connection</li>
+                    <li>Restart your device</li>
+                    <li>Check if there are any pending iOS/Android updates</li>
+                </ul>
+            </div>
 
-    <h2>What to Include When Contacting Support</h2>
-    <p>To help us assist you more effectively, please include:</p>
-    <ul>
-        <li>Your device model and operating system version</li>
-        <li>TaskFrame app version</li>
-        <li>Detailed description of the issue</li>
-        <li>Steps to reproduce the problem</li>
-        <li>Screenshots or screen recordings if applicable</li>
-    </ul>
+            <div class="info-section fade-in">
+                <h2>What to Include When Contacting Support</h2>
+                <p>To help us assist you more effectively, please include:</p>
+                <ul>
+                    <li>Your device model and operating system version</li>
+                    <li>TaskFrame app version</li>
+                    <li>Detailed description of the issue</li>
+                    <li>Steps to reproduce the problem</li>
+                    <li>Screenshots or screen recordings if applicable</li>
+                </ul>
+            </div>
 
-    <h2>Feature Requests</h2>
-    <p>Have an idea for a new feature? We'd love to hear from you! Send your suggestions to <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a> with "Feature Request" in the subject line.</p>
+            <div class="info-section fade-in">
+                <h2>Feature Requests</h2>
+                <p>Have an idea for a new feature? We'd love to hear from you! Send your suggestions to <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a> with "Feature Request" in the subject line.</p>
+            </div>
 
-    <h2>Privacy & Data</h2>
-    <p>Questions about how we handle your data? Check out our <a href="privacypolicy.html">Privacy Policy</a> or contact us directly for specific privacy-related inquiries.</p>
+            <div class="info-section fade-in">
+                <h2>Privacy & Data</h2>
+                <p>Questions about how we handle your data? Check out our <a href="privacypolicy.html">Privacy Policy</a> or contact us directly for specific privacy-related inquiries.</p>
+            </div>
 
-    <div class="contact-card">
-        <h2>Still Need Help?</h2>
-        <p>Can't find what you're looking for? Don't hesitate to reach out!</p>
-        <p><strong>Email:</strong> <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a></p>
-        <p>We're committed to providing excellent support and helping you succeed with TaskFrame.</p>
-    </div>
+            <div class="contact-card fade-in">
+                <h2><i class="fas fa-life-ring"></i> Still Need Help?</h2>
+                <p>Can't find what you're looking for? Don't hesitate to reach out!</p>
+                <p><strong>Email:</strong> <a href="mailto:bradleyethan428@gmail.com">bradleyethan428@gmail.com</a></p>
+                <p>We're committed to providing excellent support and helping you succeed with TaskFrame.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2025 Bradley Rothbaum. All rights reserved.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html> 
