@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFrame - Organize Your Life</title>
+    <title>TaskFrame</title>
     <link rel="icon" type="image/png" href="newIconLight.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -252,6 +252,105 @@
             line-height: 1.6;
         }
 
+        /* Premium Section */
+        .premium {
+            padding: 5rem 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .premium-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .premium-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .premium-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .premium-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .premium-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .premium-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .premium-badge {
+            background: #ff6b9d;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: auto;
+        }
+
+        .premium-cta {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .premium-cta h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .premium-cta p {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
         /* Footer */
         .footer {
             background: #1a1a1a;
@@ -353,6 +452,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .premium-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -391,7 +494,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#premium">Upgrades</a></li>
                 <li><a href="support.html">Support</a></li>
                 <li><a href="privacypolicy.html">Privacy</a></li>
             </ul>
@@ -401,10 +504,10 @@
     <section class="hero">
         <div class="hero-content">
             <img src="newIconLight.png" alt="TaskFrame Icon" class="hero-icon">
-            <h1>Organize Your Life</h1>
-            <p>TaskFrame helps you stay productive with smart tagging, subtasks, recurring tasks, and customizable notifications. The ultimate task management app for iOS.</p>
+            <h1>Tasks on your time</h1>
+            <p>TaskFrame helps you stay productive with tagging, start and due dates, recurring tasks, and lots of customization.</p>
             <div class="cta-buttons">
-                <a href="#features" class="btn btn-primary">
+                <a href="#features" class="btn btn-secondary">
                     <i class="fas fa-rocket"></i>
                     Learn More
                 </a>
@@ -418,28 +521,35 @@
 
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title fade-in">Why Choose TaskFrame?</h2>
+            <h2 class="section-title fade-in">Why TaskFrame?</h2>
             <div class="features-grid">
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-tags"></i>
                     </div>
-                    <h3>Smart Tagging System</h3>
-                    <p>Organize tasks with custom tags and nested tag hierarchies. Pin important tags, customize colors, and filter your tasks with powerful tag-based organization.</p>
+                    <h3>Smart Tagging</h3>
+                    <p>Organize tasks with custom tags and nested hierarchies. Pin important tags, customize colors, and filter your tasks with powerful tag-based organization.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
-                        <i class="fas fa-list-check"></i>
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Subtasks & Checklists</h3>
-                    <p>Break down complex tasks into manageable subtasks. Track progress with individual completion status and keep your projects organized.</p>
+                    <h3>Start & Due Dates</h3>
+                    <p>Set precise start and due dates for your tasks. TaskFrame helps you plan ahead and stay on track with flexible scheduling options.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-redo"></i>
                     </div>
                     <h3>Recurring Tasks</h3>
-                    <p>Set up tasks that repeat daily, weekly, or monthly. Perfect for habits, regular meetings, and ongoing projects with flexible recurrence patterns.</p>
+                    <p>Create tasks that repeat daily, weekly, or monthly. Perfect for habits, regular meetings, and ongoing projects with flexible recurrence patterns.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Lots of Customization</h3>
+                    <p>Customize everything from colors and icons to notification preferences and dashboard layouts. Make TaskFrame work exactly how you want.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
@@ -450,19 +560,47 @@
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Dashboard & Analytics</h3>
-                    <p>Customize your dashboard with reorderable widgets, pin favorite tags, and track your productivity with built-in analytics and insights.</p>
+                    <h3>iOS Native</h3>
+                    <p>Built specifically for iOS with native widgets, Focus mode integration, and seamless Apple ecosystem integration.</p>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
+            </div>
+        </div>
+    </section>
+
+    <section class="premium" id="premium">
+        <div class="container">
+            <h2 class="section-title fade-in">Upgrades</h2>
+            <p class="premium-subtitle fade-in">Unlock advanced features to supercharge your productivity</p>
+            
+            <div class="premium-grid">
+                <div class="premium-card fade-in">
+                    <div class="premium-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h3>Dashboard Customization</h3>
+                    <p>Reorder dashboard items and pin your most used tags to the top for quick access to what matters most.</p>
+                </div>
+                
+                <div class="premium-card fade-in">
+                    <div class="premium-icon">
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>Time Presets</h3>
-                    <p>Create custom time presets for quick task scheduling. Save your most used time configurations for faster task creation.</p>
+                    <p>Create unlimited custom time presets for quick task scheduling. Save your most used configurations.</p>
+                </div>
+                
+                <div class="premium-card fade-in">
+                    <div class="premium-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Advanced Notifications</h3>
+                    <p>Set custom reminder notifications and add system alarms to tasks for enhanced productivity.</p>
                 </div>
             </div>
+            
+
         </div>
     </section>
 
@@ -477,15 +615,17 @@
                     <li><a href="privacypolicy.html">Privacy Policy</a></li>
                 </ul>
                 <div class="social-links">
-                    <a href="#" aria-label="App Store"><i class="fab fa-apple"></i></a>
-                    <a href="#" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="App Store"><i class="fa-brands fa-apple"></i></a>
+                    <a href="https://www.threads.com/@bradr3d" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                    <a href="https://fosstodon.org/@bradr3d" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
                 </div>
             </div>
-        </div>
+    </div>
     </footer>
 
     <script>
+
+
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,

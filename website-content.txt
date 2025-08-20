@@ -1,0 +1,173 @@
+TASKFRAME WEBSITE CONTENT
+========================
+
+PAGE TITLE:
+TaskFrame
+
+NAVIGATION:
+- Features
+- Upgrades  
+- Support
+- Privacy Policy
+
+HERO SECTION:
+Title: Tasks on Your Time
+Description: TaskFrame helps you stay productive with tagging, start and due dates, recurring tasks, and lots of customization.
+
+Call-to-Action Buttons:
+- Learn More (with rocket icon)
+- Get Support (with headset icon)
+Cursor, can you make these buttons styled the same way?
+
+MAIN FEATURES SECTION:
+Title: Why TaskFrame?
+
+Feature 1:
+- Icon: tags
+- Title: Tags
+- Description: Organize tasks with tags and nested tag hierarchies. Pin important tags, customize colors, and filter your tasks with tag-based organization.
+
+Feature 2:
+- Icon: list-check
+- Title: Subtasks & Checklists
+- Description: Break down complex tasks into manageable subtasks. Track progress with individual completion status and keep your projects organized.
+
+Feature 3:
+- Icon: redo
+- Title: Recurring Tasks
+- Description: Set up tasks that repeat daily, weekly, or monthly. Perfect for habits, regular meetings, and ongoing projects with flexible recurrence patterns.
+
+Feature 4:
+- Icon: bell
+- Title: Smart Notifications
+- Description: Get reminded with customizable notifications and system alarms. Set start and due date reminders to never miss important deadlines.
+
+Feature 5:
+- Icon: sync
+- Title: Seamless Sync
+- Description: Access your tasks anywhere with automatic cloud sync. Your data stays up-to-date across all your devices in real-time.
+
+Feature 6:
+- Icon: mobile-alt
+- Title: iOS Optimized
+- Description: Built specifically for iOS with native widgets, Focus mode integration, and seamless Apple ecosystem integration.
+
+PREMIUM FEATURES SECTION:
+Title: Premium Features
+Subtitle: Unlock advanced features to supercharge your productivity
+
+Premium Feature 1:
+- Icon: th-large
+- Title: Dashboard Customization
+- Description: Reorder dashboard items and pin your most used tags to the top for quick access to what matters most.
+
+Premium Feature 2:
+- Icon: clock
+- Title: Time Presets
+- Description: Create unlimited custom time presets for quick task scheduling. Save your most used configurations.
+
+Premium Feature 3:
+- Icon: bell
+- Title: Advanced Notifications
+- Description: Set custom reminder notifications and add system alarms to tasks for enhanced productivity.
+
+Premium CTA:
+- Title: Ready to upgrade?
+- Description: Get access to each premium feature with a one-time purchase. No subscriptions, no recurring fees.
+- Button: Upgrade to Premium (with crown icon) REMOVE THIS BUTTON
+
+FOOTER:
+Copyright: © 2025 TaskFrame. All rights reserved.
+Links: Support, Privacy Policy
+Social Icons: App Store, Google Play, Twitter
+App Store, Threads, Mastodon please
+
+SUPPORT PAGE:
+Title: TaskFrame Support
+Subtitle: We're here to help you get the most out of your productivity experience. Find answers to common questions below or contact us directly.
+
+Contact Card:
+- Title: Get Help
+- Email: support@taskframe.app
+
+REMOVE FAQ and Troubleshooting and Support Information and Feature Requests
+
+FAQ Section:
+Title: Frequently Asked Questions
+
+FAQ 1:
+- Question: How do I get started with TaskFrame?
+- Answer: Download TaskFrame from the App Store, create your account, and start adding your first tasks. The app will guide you through the initial setup process.
+
+FAQ 2:
+- Question: Is TaskFrame free to use?
+- Answer: TaskFrame offers both free and premium features. The core functionality is available for free, with additional premium features available through in-app purchases.
+
+FAQ 3:
+- Question: How do I sync my tasks across devices?
+- Answer: Make sure you're signed in to the same account on all your devices. TaskFrame automatically syncs your data when you have an internet connection.
+
+FAQ 4:
+- Question: I'm having trouble with notifications
+- Answer: Check your device's notification settings and ensure TaskFrame has permission to send notifications. You can also adjust notification preferences within the app settings.
+
+FAQ 5:
+- Question: How do I delete my account?
+- Answer: To delete your account and all associated data, please contact us at bradleyethan428@gmail.com with your deletion request.
+
+FAQ 6:
+- Question: The app is crashing or not working properly
+- Answer: Try restarting the app or your device. If the problem persists, please contact support with details about when the crash occurs and what you were doing in the app.
+
+Troubleshooting Section:
+Title: Before contacting support, please try these steps:
+- Force close and restart the app
+- Check if you have the latest version of TaskFrame
+- Ensure you have a stable internet connection
+- Restart your device
+- Check if there are any pending iOS/Android updates
+
+Support Information Section:
+Title: What to Include When Contacting Support
+Description: To help us assist you more effectively, please include:
+- Your device model and operating system version
+- TaskFrame app version
+- Detailed description of the issue
+- Steps to reproduce the problem
+- Screenshots or screen recordings if applicable
+
+Feature Requests Section:
+Title: Feature Requests
+Description: Have an idea for a new feature? We'd love to hear from you! Send your suggestions to bradleyethan428@gmail.com with "Feature Request" in the subject line.
+
+Privacy Section:
+Title: Privacy & Data
+Description: Questions about how we handle your data? Check out our Privacy Policy or contact us directly for specific privacy-related inquiries.
+
+Final Contact Card:
+Title: Still Need Help?
+Description: Can't find what you're looking for? Don't hesitate to reach out!
+Email: bradleyethan428@gmail.com
+Additional Info: We're committed to providing excellent support and helping you succeed with TaskFrame.
+
+PRIVACY POLICY PAGE:
+Title: Privacy Policy
+Subtitle: Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+
+Table of Contents:
+- Overview
+- Information Collection and Use
+- Third Party Access
+- Opt-Out Rights
+- Data Retention Policy
+- Children
+- Security
+- Changes
+- Your Consent
+- Contact Us
+
+Contact Section:
+Title: Contact Us
+Description: If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at bradleyethan428@gmail.com.
+
+Footer Note: This privacy policy page was generated by App Privacy Policy Generator
