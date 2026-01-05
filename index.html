@@ -896,7 +896,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <p>&copy; 2025 TaskFrame. All rights reserved.</p>
+                    <p>&copy; <span id="copyright-year">2025</span> TaskFrame. All rights reserved.</p>
                 </div>
                 <ul class="footer-links">
                     <li><a href="support.html">Support</a></li>
@@ -957,6 +957,9 @@
                 nav.style.boxShadow = 'none';
             }
         });
+
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

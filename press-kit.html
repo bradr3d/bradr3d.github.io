@@ -450,7 +450,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <p>&copy; 2025 TaskFrame. Lovingly crafted by Brad Rothbaum.</p>
+                    <p>&copy; <span id="copyright-year">2025</span> TaskFrame. Lovingly crafted by Brad Rothbaum.</p>
                 </div>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
@@ -487,6 +487,9 @@
                 nav.style.boxShadow = 'none';
             }
         });
+
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

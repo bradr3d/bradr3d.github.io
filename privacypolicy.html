@@ -442,7 +442,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <p>&copy; 2025 Brad Rothbaum. All rights reserved.</p>
+                    <p>&copy; <span id="copyright-year">2025</span> Brad Rothbaum. All rights reserved.</p>
                 </div>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
@@ -486,6 +486,9 @@
                 }
             });
         });
+
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
